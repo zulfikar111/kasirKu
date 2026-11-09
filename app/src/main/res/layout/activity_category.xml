@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:id="@+id/main"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/bg_page"
+  android:orientation="vertical">
+
+  <com.google.android.material.appbar.MaterialToolbar
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/green_dark"
+    app:navigationIcon="?attr/homeAsUpIndicator"
+    app:navigationIconTint="@color/white"
+    app:title="Kategori Barang"
+    app:titleTextColor="@color/white" />
+
+  <FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1">
+
+    <ListView
+      android:id="@+id/listCategories"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:clipToPadding="false"
+      android:paddingBottom="88dp" />
+
+    <TextView
+      android:id="@+id/tvEmpty"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:gravity="center"
+      android:padding="32dp"
+      android:text="Belum ada kategori.\nTekan Tambah Kategori untuk membuat yang pertama."
+      android:textColor="@color/text_secondary"
+      android:textSize="15sp"
+      android:visibility="gone" />
+
+    <ProgressBar
+      android:id="@+id/progress"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+      android:id="@+id/fabAdd"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="bottom|end"
+      android:layout_margin="16dp"
+      android:text="Tambah Kategori"
+      android:textColor="@color/white"
+      app:backgroundTint="@color/green_dark" />
+  </FrameLayout>
+</LinearLayout>
